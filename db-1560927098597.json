@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "text": "Aspernatur commodi quae eveniet culpa quis veniam.",
+      "date": "Dec 19, 2018"
+    },
+    {
+      "id": 1,
+      "text": "Enim recusandae repellat enim consequatur et.",
+      "date": "Jun 21, 2018"
+    },
+    {
+      "id": 2,
+      "text": "Rem perspiciatis perspiciatis omnis voluptatem velit omnis.",
+      "date": "Dec 23, 2018"
+    },
+    {
+      "id": 3,
+      "text": "Quisquam debitis error eos veniam eaque rerum sint.",
+      "date": "Aug 22, 2018"
+    },
+    {
+      "id": 4,
+      "text": "Est reprehenderit at suscipit eum.",
+      "date": "Apr 8, 2019"
+    },
+    {
+      "id": 5,
+      "text": "Dolorem et dolor unde ea commodi consequatur deleniti iusto.",
+      "date": "Jun 10, 2019"
+    },
+    {
+      "id": 6,
+      "text": "Dignissimos reprehenderit consequuntur qui qui.",
+      "date": "May 24, 2019"
+    },
+    {
+      "id": 7,
+      "text": "Ut dolorem pariatur dolorum autem magni rerum.",
+      "date": "Sep 16, 2018"
+    },
+    {
+      "id": 8,
+      "text": "Ea officiis corrupti voluptatem autem aliquam sit quia officia expedita.",
+      "date": "Oct 13, 2018"
+    },
+    {
+      "id": 9,
+      "text": "Nam modi ut consequuntur vero dolorem qui ea.",
+      "date": "Jul 16, 2018"
+    }
+  ]
+}
