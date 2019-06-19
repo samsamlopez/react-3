@@ -52,7 +52,11 @@ class App extends Component {
     });
   }
 
-  createPost() {}
+  createPost( text ) {
+    axios.post('https://practiceapi.devmountain.com/api/posts', { text }).then( results => {
+      this.setState({ posts: results.data });
+    });
+  }
 
   render() {
     const { posts } = this.state;
@@ -62,7 +66,7 @@ class App extends Component {
         <Header />
 
         <section className="App__content">
-          <Compose />
+          <Compose createPostFn={this.createPost} />    
 
           {posts.map(post => (
             <Post
