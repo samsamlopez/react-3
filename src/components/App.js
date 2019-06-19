@@ -29,9 +29,6 @@ class App extends Component {
     axios.put(`http://localhost:9090/posts/${id}`, { text }).then(response => {
       const updatedPost = response.data;
       
-      // remember we CANNOT! directly mutate the properties on this.state
-      // We use map here to make a new copy of the posts but with the updated
-      // post that was edited.
       const updatedPosts = this.state.posts.map(post => {
         if (post.id === updatedPost.id) {
           return { post, ...updatedPost };
@@ -51,11 +48,20 @@ class App extends Component {
       });
     });
   }
-
-  createPost( text ) {
-    axios.post('https://practiceapi.devmountain.com/api/posts', { text }).then( results => {
-      this.setState({ posts: results.data });
+  //https://practiceapi.devmountain.com/api/posts
+  
+  createPost(text) {
+    const date = new Date().toLocaleString('en-US', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
     });
+ 
+    axios
+      .post('http://localhost:9090/posts', { text, date })
+      .then(results =>
+        this.setState({ posts: [results.data, ...this.state.posts] })
+      );
   }
 
   render() {
@@ -66,7 +72,7 @@ class App extends Component {
         <Header />
 
         <section className="App__content">
-          <Compose createPostFn={this.createPost} />    
+          <Compose createPostFn={ this.createPost} />    
 
           {posts.map(post => (
             <Post
